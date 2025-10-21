@@ -1,0 +1,397 @@
+@charset "UTF-8"
+
+html{
+  font-size: 16px;
+}
+body{
+  background-image: url(image/dot.png);
+  background-repeat: repeat;
+  background-color: #e9e5df;
+  width: 100%;
+  height: 100%;
+}
+a {
+  text-decoration: none; /* 移除底線 */
+  color: inherit;/* 跟隨父元素顏色，不變色 */
+}
+h1,p{
+  font-family: "Cormorant Infant", serif;
+}
+
+h1{
+  font-size: 6rem;
+  font-weight: 500;
+  color: #729a5f;
+}
+
+p{
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #6e7784;
+  font-style: italic;
+  letter-spacing: 0.1em;
+  hyphens: auto;/* 自動英文斷字 */
+}
+
+h2,h3,h4{
+  font-family: "Cactus Classical Serif", serif;
+  font-weight: 600;
+  margin-top: 0;
+  line-height: 1.5;
+}
+h2{
+  font-size: 3.2rem;
+  color: #729a5f;
+}
+h3{
+  font-size: 2.3rem;
+  color: #729a5f;
+  font-weight: 600;
+}
+h4{
+  font-size: 1.5rem;
+  color: #6e7784;
+  font-weight: 600;
+}
+div{
+  width:100%;
+}
+img:not(.no-style){
+  display: block;
+}
+
+/* 第一頁設定 */
+.st1{
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("image/background.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  text-align: center;/* 物件都置中*/
+  padding: 30px 5% 0% 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.st1-1{
+  border-top: 1.5px solid #ffffff;
+  border-bottom: 1.5px solid #ffffff;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5em 1em;
+}
+
+.st1-1-left{
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  justify-content: start; /* 對齊左邊 */
+  align-items:center;/* 水平對齊方式 */
+  gap: 16px;
+}
+.st1-1-right{
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  justify-content: end; /* 對齊右邊 */
+  align-items:center;/* 水平對齊方式 */
+}
+
+.st1-2{
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 水平置中 flex 子元素 */
+}
+.logo{
+  width:27em;
+}
+.st1-2 h3{
+  margin-top: 15%;
+}
+.st1-3{
+    display: flex;
+    justify-content: center;
+}
+/* 第一頁-小CD */
+.cd{
+  width:25%;
+  height: auto;
+  position:relative;
+  bottom: 0;
+  transform: translateY(50%);/* 圖片中心點卡在第一頁與第二頁中間的位置*/
+}
+
+/* 第二頁設定 */
+.st2{
+  padding: 19% 5% 0% 13% ;
+  display: grid;
+  grid-template-columns: 1fr; /* 一欄 */
+  gap: 2rem;
+}
+
+/* 第二章-大標*/
+.st2-div1 p{
+  text-align: right;
+}
+
+/* 第二章-照片區域*/
+.st2-div2{
+  height:47vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;/* 物件置中*/
+
+  background-image: url("image/Sheet Music.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+.st2-div2 img{
+  width: 85%;/* 3D外觀圖片大小*/
+}
+.st2-div3 h3{
+  margin-top: 10%
+}
+.st2-div3 h4{
+  margin-top: 2%
+}
+.st2-div3 p{
+  margin-top: 7%
+}
+
+
+/* 第三頁設定 */
+.st3{
+  padding: 5% 13% 10%;
+}
+
+.st3-1{
+  margin-top: 10%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* 兩欄 */
+  gap: 6rem; /* 欄與欄、列與列的間距 */
+}
+.icon{
+  display: inline-block !important;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;  /* 讓圖示與文字基線對齊，看起來不歪斜 */
+  margin: 0 0.1em;  
+}
+
+/* ------------------------------------------------- */
+
+/* 桌機專用樣式 */
+@media (min-width: 1024px) {
+  /* 桌機版最大寬幅 */
+  .wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+  }
+
+  /* 桌機版文字大小 */
+  h1{
+    font-size: 5.2rem;
+  }
+  h2{
+    font-size: 2.8rem;
+  }
+  h4{
+    font-size: 1.2rem;
+  }
+  h3{
+    font-size: 2rem;
+  }
+
+  /* 文字斷行隱藏 */
+  .br-hide{
+    display: none;
+  }
+  /* 桌機版-第一章 */
+  .st1{
+    width: 100vw;
+    height: 100vh;
+    background-position:center;
+  }
+ 
+  .logo{
+    width:25em;
+  }
+  .st1-2 {
+    margin-top: 10vh;
+  }
+  .st1-2 h3{
+    margin-top: 8vh;
+  }
+  
+  /* 第一頁-小CD */
+  .cd{
+  width:18em;
+  }
+
+
+
+  /* 桌機版-第二章 */
+
+  .st2{
+    padding-top: 12vh;
+    grid-template-columns: repeat(2, 1fr); /* 兩欄 */
+    grid-template-rows: auto auto;         /* 兩列 */
+  }
+  .st2-div1{
+    grid-column: 1 / span 2;
+  }
+  .st2-div1 p{
+    position: relative;
+    transform: translateY(-340%);
+  }
+  .st2-div2{
+    height:100%;
+    grid-column: 2; /* 放右邊 */
+    grid-row: 2;
+    position: relative;transform: scale(1.2); /* 放大 110% */
+    transform-origin: bottom right;    /* 從右下角為中心點放大 */
+  }
+  .st2-div3{
+    grid-column: 1; /* 放左邊 */
+    grid-row: 2;
+    padding-right: 30%;
+  }
+  .st2-div3 h4{
+     margin-top: 5%
+  }
+  .st2-div3 p{
+     margin-top: 20%;
+  }
+
+  /* 桌機版-第三章 */
+  .st3-1{
+    grid-template-rows: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  .st3{
+    margin-bottom: 10%;
+  }
+  .img-3D{
+    width: 100vw;
+    height: auto;
+    align-items: center;
+    background-color: aqua;
+  }
+  .cd{
+    width:12em;
+  }
+}
+
+/* ------------------------------------------------- */
+/* 動態部分 */
+
+/* 動態部分-淡入 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+}
+.fade-in.show {
+  animation: fadeIn 1.3s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* 動態部分-文字向上浮現 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  opacity: 0;
+}
+.fade-up.show {
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
+/* 動態部分-文字向下浮現 */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-down {
+  opacity: 0;
+}
+.fade-down.show {
+  animation: fadeInDown 1s ease-out forwards;
+}
+
+/* 動態部分-文字向右浮現 */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-right {
+  opacity: 0;
+}
+.fade-right.show {
+  animation: fadeInRight 1.5s ease-out forwards;
+}
+
+/* 動態部分-圖片轉動 */
+@keyframes spinWithTranslate {
+  from {
+    transform: translateY(50%) rotate(0deg);
+  }
+  to {
+    transform: translateY(50%) rotate(360deg);
+  }
+}
+
+/* 初始靜止不動 */
+.spin {
+  opacity: 0;
+  transform: translateY(50%) rotate(0deg);
+  transform-origin: center center;
+}
+
+/* 畫面滑到才轉動（只轉一次） */
+.spin.show {
+  opacity: 1;
+  animation: spinWithTranslate 6s linear forwards;
+}
+
+
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* 平板專用樣式 */
+}
