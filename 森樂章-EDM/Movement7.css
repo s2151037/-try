@@ -185,6 +185,54 @@ img:not(.no-style){
 
 /* ------------------------------------------------- */
 
+/* 平板專用樣式 */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* 平板-共同部分 */
+
+  /* 平板文字大小 */
+  h1{
+    font-size: 5.2rem;
+  }
+  h2{
+    font-size: 2.8rem;
+  }
+  h4{
+    font-size: 1.3rem;
+  }
+  h3{
+    font-size: 2rem;
+  }
+
+
+  /* 文字斷行隱藏 */
+  .br-hide-ipad{
+    display: none;
+  }
+
+  /* 平板-第三章(與桌機版設定相同) */
+  
+  .st3-1{
+    grid-template-rows: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 40px;
+  }
+  .st3{
+    margin-bottom: 10%;
+  }
+  .img-3D{
+    width: 100vw;
+    height: auto;
+    align-items: center;
+    background-color: aqua;
+  }
+  .cd{
+    width:12em;
+  }
+}
+
+
+/* ------------------------------------------------- */
+
 /* 桌機專用樣式 */
 @media (min-width: 1024px) {
   /* 桌機版最大寬幅 */
