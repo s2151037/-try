@@ -210,15 +210,23 @@ img:not(.no-style){
   }
 
   /* 平板-第三章(與桌機版設定相同) */
-  
+
+  .st3{
+    margin-bottom: 10%;
+  }
+  .st3 h3{
+    font-size: 1.5rem;
+  }
+  .st3 h4{
+    font-size: 1.15rem;
+    text-align: justify; /* 兩端對齊 */
+  }
   .st3-1{
     grid-template-rows: repeat(2, 1fr); 
     grid-template-columns: repeat(2, 1fr); 
     gap: 40px;
   }
-  .st3{
-    margin-bottom: 10%;
-  }
+  
   .img-3D{
     width: 100vw;
     height: auto;
